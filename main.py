@@ -1,5 +1,6 @@
+import asyncio
 
-def greet(name):
+async def greet(name):
     print(f"Hello {name}!")
 
-greet("world")
+asyncio.run(greet("world"))
