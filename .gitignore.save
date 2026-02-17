@@ -1,7 +1,0 @@
-# pixi environments
-.pixi
-pixi.lock
-
-# Git
-.gitattributes
-
