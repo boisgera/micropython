@@ -1,0 +1,17 @@
+[workspace]
+authors = ["Sébastien Boisgérault <Sebastien.Boisgerault@gmail.com>"]
+channels = ["conda-forge"]
+name = "micropython"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[activation.env]
+PATH = "$PIXI_PROJECT_ROOT/bin:$PATH"
+
+[tasks.setup]
+cmd = "sh install-micropython.sh"
+outputs = ["bin/micropython"]
+
+[tasks.main]
+cmd = "micropython main.py"
+depends-on = ["setup"]
